@@ -6,9 +6,60 @@
 
     ],
     "products":[
-        { "id" :1,"catId":1,"title":"ELECTRA EL10620N"},
-        { "id" :2,"catId":1,"title":"PEERLESS BCD-210 W"},
-        { "id" :1,"catId":1,"title":"MASIMO MARF-240K-DF"}
+        { 
+            "id" :1,
+            "catId":1,
+            "title":"ELECTRA EL10620N",
+            "productCode":"BFFD3577",
+            "image":"1.jpg",
+            "price":579,
+            "sku":"577318",
+            "description":"ELECTRA EL10620N bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "st0ck":20
+            
+
+        },
+        { 
+            "id" :2,
+            "catId":1,
+            "title":"PEERLESS BCD-210 W",
+            "productCode":"BFFD3577",
+            "image":"1.jpg",
+            "price":350,
+            "sku":"577318",
+            "description":"PEERLESS BCD-210 W bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "st0ck":20
+        },
+        { 
+            "id" :3,
+            "catId":1,
+            "title":"MASIMO MARF-240K-DF",
+            "productCode":"BFFD3577",
+            "image":"1.jpg",
+            "price":160,
+            "sku":"577318",
+            "description":"MASIMO MARF-240K-DF bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "st0ck":20
+            
+        }
 
     ]
 }
