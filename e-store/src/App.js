@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Category from './Components/category';
 import { getCatgories,getProduct } from './Helper/fetcher';
+import CategoryProduct from './Components/category_product';
 
 function App() {
   const[categories,setCategories]=useState({erorMassege:"",data:[]})
@@ -46,13 +47,23 @@ const renderCategoty=()=>{
   return category
 }
 const renderProducts=()=>{
-  const product=[]
-  for (let index = 0; index < products["data"].length; index++) {
-    product.push(<div>{products["data"][index].title}</div>)
+ console.log(products)
+  return products.data.map(p =>
     
-  }
-  console.log(product)
-  return product
+  <CategoryProduct key={p.id}{...p}>{p.title}</CategoryProduct>);
+  // const product=[]
+  // for (let index = 0; index < products["data"].length; index++) {
+  //   product.push(
+  //   <Category_Product
+  //   title={products["data"][index].title} image={products["data"][index].image} spec={products["data"][index].spec[]}
+  //   ></Category_Product>
+  //   )
+    
+  // }
+  // // product.push(<div>{products["data"][index].title}</div>)
+  // console.log(product)
+  // return product
+
 }
 
 
@@ -70,13 +81,13 @@ const renderProducts=()=>{
   { categories.data && renderCategoty() }
 
   </nav>
-  <article>
+  <main>
   { categories.erorMassege && <div>ERROR:{categories.erorMassege}</div> }
     <h1>products</h1>
     {products.data && renderProducts()}
-  </article>
+  </main>
 </section>
-<footer>footer</footer>
+{<footer>footer</footer>}
     <div className="App">
      
     </div>

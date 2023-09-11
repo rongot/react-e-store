@@ -20,10 +20,11 @@ section {
 }
 
 nav {
-  flex:0.5;
-  -ms-flex: 0.5;
+  flex:0.01;
+  -ms-flex: -1;
   background: #ccc;
   padding: 20px;
+
 
 }
 
@@ -44,4 +45,100 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+.category-product-title{
+  grid-column: 1 / span 3;
+  color: darkslategray;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+
+}
+.category-product-image-container {
+padding: 10px;
+width: 60px;
+}
+.category-product-image-container img{
+  width: 50px;
+  height: 50px;
+}
+
+.category-product-info-header{
+  display: flex;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  
+   
+}
+.category-product-price{
+  padding: 10px;
+  width: 60%;
+}
+.category-product-info-finance-price{
+  color: darkslategray;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+
+.category-product-info-dimenstions,
+.category-product-info-capacity{
+  display: flex;
+  flex-direction: column;
+}
+
+.category-product-info-dimenstions h3,
+.category-product-info-capacity h3,
+.category-product-info-features h3{
+  color: darkslategray;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.category-product-info-features li{
+padding-top: 5px;
+}
+.category-product-info-stock{
+  padding-left: 10px;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: lightgray;
+  height: 45%;
+  width: 32%;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  
+}
+  
+.category-product-info-stock label{
+  padding-bottom: 5px;
+}
+.category-product-action{
+  display: flex;
+  flex-direction: column;
+}
+.category-product-action button{
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 90px;
+  margin-top: -25%;
+  /* margin-bottom: -20px; */
+  background-color: lightgray;
+  border: solid 1pz slategray;
+  font-weight: bold;
+  /* position: relative; */
+}
+.category-product-action button:last-child{
+  background-color: darkgray;
+  
+}
+@media (max-width: 600px){
+  section{
+    flex-direction:column ;
+  }
 }

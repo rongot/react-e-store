@@ -1,0 +1,102 @@
+{
+    "categories":[
+        { "id":1,"title":"fridges"},
+        { "id":2,"title":"kettles"},
+        { "id":3,"title": "TV"}
+
+    ],
+    "products":[
+        { 
+            "id" :1,
+            "catId":1,
+            "title":"ELECTRA EL10620N",
+            "productCode":"BFFD3577",
+            "image":"269475_1.jpg",
+            "price":579,
+            "sku":"577318",
+            "description":"ELECTRA EL10620N bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "stock":20
+            
+
+        },
+        { 
+            "id" :2,
+            "catId":1,
+            "title":"PEERLESS BCD-210 W",
+            "productCode":"BFFD3577",
+            "image":"77639502c.gif",
+            "price":350,
+            "sku":"577318",
+            "description":"PEERLESS BCD-210 W bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "stock":20
+        },
+        { 
+            "id" :3,
+            "catId":1,
+            "title":"MASIMO MARF-240K-DF",
+            "productCode":"BFFD3577",
+            "image":"refre.jpg",
+            "price":160,
+            "sku":"577318",
+            "description":"MASIMO MARF-240K-DF bla bla bla",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "stock":20
+            
+        },
+        { 
+            "id" :4,
+            "catId":1,
+            "title":"LG 24.2 Cu",
+            "productCode":"LFXS24623W",
+            "image":"refre.jpg",
+            "price":160,
+            "sku":"577318",
+            "description":"LG 24.2 Cu. Ft. French Door Refrigerator",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "stock":20
+            
+        },
+        { 
+            "id" :5,
+            "catId":1,
+            "title":"Frigidaire ",
+            "productCode":"LFXhdgdg23W",
+            "image":"refre.jpg",
+            "price":160,
+            "sku":"577318",
+            "description":"Electric Microwave Combination Oven with Fan Convection",
+            "spec":
+            {
+                "dimensions":"177.5 * 54 * 54.54cm(H* W* D)",
+                "capacity":"220 liter"
+            },
+            "features":["no need to defrost","sutable","bla"],
+            "stock":20
+            
+        }
+
+
+    ]
+}
