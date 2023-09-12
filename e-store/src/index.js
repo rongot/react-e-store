@@ -15,7 +15,6 @@ root.render(
       <Route path='/' element={<App/>}/>
       <Route path='products/:productId' element={<ProductDetail/>}/>
       <Route path='basket' element={<Basket/>}/>
-      <Route path='basket' element={<Basket/>}/>
       <Route path='checkout' element={<Checkout/>}/>
    </Routes>
     

@@ -34,10 +34,13 @@ nav ul {
 }
 
 article {
- flex: 4;
- -ms-flex: 4;
- background-color: #f1f1f1;
- padding: 10px;
+ flex: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ /* -ms-flex: 4;
+ background-color: #f1f1f1; */
+ grid-template-rows: 0.25fr 1fr 0.25fr;
+ /* padding: 10px; */
+ column-gap: 20px;
 }
 
 footer {
@@ -70,7 +73,7 @@ width: 60px;
   
    
 }
-.category-product-price{
+.category-product-info-finance{
   padding: 10px;
   width: 60%;
 }
@@ -141,4 +144,32 @@ padding-top: 5px;
   section{
     flex-direction:column ;
   }
+}
+
+.category-product-detail-action{
+  flex-direction: column;
+}
+.category-product-detail-action button{
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  /* margin-bottom: -20px; */
+  background-color: lightgray;
+  border: solid 1pz slategray;
+  font-weight: bold;
+  /* position: relative; */
+}
+
+/* container */
+.three-columns-grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* columns */
+.three-columns-grid > * {
+  padding:1rem;
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 function CategoryProduct({id,title,image,spec,features,price,stock}) {
-    
+    const navigate=useNavigate();
   return (
     <article className='category-product-info-header'>
     <div className='category-product-title'>
@@ -11,7 +11,7 @@ function CategoryProduct({id,title,image,spec,features,price,stock}) {
     </div>
     <figure>
         <div className='category-product-image-container'>
-        <img src={`./assets/${image}`} alt={title}/>
+        <img src={`../assets/${image}`} alt={title}/>
         </div>
     </figure>
     <aside>
@@ -50,8 +50,8 @@ function CategoryProduct({id,title,image,spec,features,price,stock}) {
         </div>
         
         <div className='category-product-action'>
-            <button>View product</button>
-            <button>Add to Basket</button>
+            <button onClick={()=>navigate(`products/${id}`)}>View product</button>
+            <button onClick={()=>navigate(`basket`)}>Add to Basket</button>
 
         </div>
     </aside>
@@ -60,3 +60,4 @@ function CategoryProduct({id,title,image,spec,features,price,stock}) {
 }
 
 export default CategoryProduct
+

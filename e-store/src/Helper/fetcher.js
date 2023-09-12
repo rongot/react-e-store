@@ -28,3 +28,7 @@ export const getCatgories=()=>{
 export const getProduct = id=>{
     return fetcher("/products?catId="+id)
 }
+
+export const getProductById = id=>{
+return fetcher("/products/"+id)
+}
