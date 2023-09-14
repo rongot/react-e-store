@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import { getProductById } from '../Helper/fetcher'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +19,9 @@ useEffect(()=>{
     fetchData()
 },[productId])
     
-    
+const creareMarkUp=()=>{
+  return {__html:product.data?.description}  
+}
     
   return (
     
@@ -75,6 +78,7 @@ useEffect(()=>{
             <button onClick={()=>navigate(`products/${product.data.id}`)}>View product</button>
     </div>
     </aside>
+    <ProductDetailDescription>{product.data?.description}</ProductDetailDescription>
     </article>   
             
         
@@ -84,7 +88,11 @@ useEffect(()=>{
 
 export default ProductDetail
 
+const ProductDetailDescription=styled.div`
+grid-column: 1 / span 3;
+`
 
+// dangerouslySetInnerHTML={creareMarkUp()}
 /* ProductDetail id:{productId} title:{product.data.title}
        capacity:{product.data.spec && product.data.spec.capacity}
        dimensions:{product.data.spec && product.data.spec.dimensions} */
