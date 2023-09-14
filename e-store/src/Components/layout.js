@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link,Outlet } from 'react-router-dom'
-import Home from './home'
+// import Home from './home'
 
 const Layout = ({categories}) => {
 
