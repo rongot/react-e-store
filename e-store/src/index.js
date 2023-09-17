@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import cartContextProvider from './contexts/cartContext';
+import CartContextProvider from './contexts/cartContext';
 
 
 
@@ -10,9 +10,9 @@ import cartContextProvider from './contexts/cartContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <cartContextProvider>
+  <CartContextProvider>
       <App />
-  </cartContextProvider>
+  </CartContextProvider>
   </React.StrictMode>
 );
 
