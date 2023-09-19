@@ -10,6 +10,9 @@ import Checkout from './Components/checkout';
 import Category from './Components/category';
 import Layout from './Components/layout';
 import Home from './Components/home'
+import OrderConfirmation from './Components/orderConfirmation';
+import SearchResults from './Components/searchResult';
+
 
 function App() {
   const[categories,setCategories]=useState({erorMassege:"",data:[]})
@@ -37,6 +40,8 @@ return (
         <Route path='basket' element={<Basket />}/>
         <Route index element={<Home />}/>
         <Route path='checkout' element={<Checkout />}/>
+        <Route path='orderConfirmation' element={<OrderConfirmation />}/>
+        <Route path='search' element={<SearchResults />}/>
         < Route path='categories/:categoryId' element={<Category />}/>
      </Route>
    </Routes>

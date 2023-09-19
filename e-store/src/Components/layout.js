@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link,Outlet } from 'react-router-dom'
+import { CartIcon, HomeIcon } from './icons'
+import Search from './search'
 // import Home from './home'
 
 const Layout = ({categories}) => {
@@ -16,7 +18,17 @@ const Layout = ({categories}) => {
 
 return (
    <React.Fragment>
-    <header>My Store</header>
+    <header>
+      <div id='HeaderHomeIcon'>
+      <Link to='/' > <HomeIcon width={40}></HomeIcon></Link> 
+      </div>
+      <Search></Search>
+      <div id='HeaderTitle'>Our Store</div>
+      <div id='HeaderCartIcon'>
+       <Link to='/basket' >< CartIcon width={40}></CartIcon></Link> 
+        </div>
+
+    </header>
         <section>
             <nav>
             { categories.erorMassege && <div>ERROR:{categories.erorMassege}</div> }

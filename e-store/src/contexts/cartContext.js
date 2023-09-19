@@ -4,27 +4,34 @@ import { CartReducer } from "./cartReducer";
 
 export const cartContext=createContext();
 
-const initialState={"cartItems":[]}
+const Storage=localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("caer")) : []
+const initialState={"cartItems":Storage}
+
 
 const CartContextProvider=({children})=>{
     const [state,dispatch]=useReducer(CartReducer,initialState)
 
         const addProduct=payload =>{
             dispatch({type:"ADD", payload})
+            return state.cartItems;
        }
         const removeProduct=payload =>{
             dispatch({type:"REMOVE",payload})
+            return state.cartItems;
         }
         const increseQuantity=payload =>{
             dispatch({type:"INQUENTITY",payload})
+            return state.cartItems;
         }
         const decreseQuantity=payload =>{
             dispatch({type:"DEQUENTITY",payload})
+            return state.cartItems;
         }
         const clearBasket=() =>{
         dispatch({type:"CLEAR",payload:undefined})
+        return state.cartItems;
         }
-        const getItem=() =>{
+        const getItems=() =>{
         return state.cartItems
         }
 
@@ -34,7 +41,7 @@ const CartContextProvider=({children})=>{
         decreseQuantity,
         increseQuantity,
         clearBasket,
-        getItem,
+        getItems,
         // ...initialState
         ...state
         }

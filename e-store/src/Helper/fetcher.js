@@ -32,3 +32,7 @@ export const getProduct = id=>{
 export const getProductById = id=>{
 return fetcher("/products/"+id)
 }
+
+export const getProductsByQuary = quary=>{
+  return fetcher("/products?q="+quary)
+}
