@@ -7,7 +7,12 @@ const Checkout = () => {
   const [form,SetForm]=useState({
     name:'',
     email:"",
-    shippingAddress1:""
+    shippingAddress1:"",
+    touched:{
+      name:false,
+      email:false,
+      shippingAddress1:false
+    }
 
   })
   const errors = {
@@ -47,6 +52,20 @@ const Checkout = () => {
   //     const disabled =Object.keys(errors).some((x)=>errors[x])
   //     return disabled
   // }
+
+  const handleBlur=(ev)=>{
+    const {name}=ev.target;
+    SetForm((prevState) => {
+      return {
+        ...prevState,
+       touched:{
+        ...form.touched,
+        [name]:true
+
+      }
+      }
+    })
+  }
  
   
   return (
@@ -58,10 +77,23 @@ const Checkout = () => {
       </CheckoutHeader>
       <CheckoutHeaderLine/>
       <CheckoutTable>
-         <CheckoutFormLabel>Name</CheckoutFormLabel>
-         <input type='texr' name='name' onChange={handleChange} placeholder='enter name' />
-         <CheckoutFormLabel>Email</CheckoutFormLabel>
-         <input type='texr' name='email' onChange={handleChange} placeholder='enter email'  />
+         <CheckoutFormLabel>Name *</CheckoutFormLabel>
+         <CheckoutFormInput 
+           type='texr' 
+           name='name' 
+           onChange={handleChange} 
+           placeholder='enter name' 
+           invalid={errors["name"]}
+           onBlur={handleBlur}
+           />
+         <CheckoutFormLabel>Email *</CheckoutFormLabel>
+         <CheckoutFormInput
+             type='texr' 
+             name='email' 
+             onChange={handleChange} 
+             placeholder='enter email'  
+             invalid={errors["email"]}
+             />
       </CheckoutTable>
       <CheckoutHeader><h4>Address details</h4></CheckoutHeader>
       <CheckoutHeaderLine/>
@@ -74,9 +106,15 @@ const Checkout = () => {
           <input type='text' name='billingAddress2'></input>
           <input type='text' name='billingCity'></input>
         </CheckoutAddress>
-        <CheckoutFormLabel>Shipping address</CheckoutFormLabel>
+        <CheckoutFormLabel>Shipping address *</CheckoutFormLabel>
         <CheckoutAddress>
-          <input type='text' name='shippingAddress1' onChange={handleChange} placeholder='enter shipping Address'></input>
+          <CheckoutFormInput 
+            type='text' 
+            name='shippingAddress1' 
+            onChange={handleChange} 
+            placeholder='enter shipping Address' 
+            invalid={errors["shippingAddress1"]}
+            />
           <input type='text' name='shippingAddress2'></input>
           <input type='text' name='shippingCity'></input>
         </CheckoutAddress>
@@ -127,6 +165,11 @@ column-gap: 20px;
 `
 const CheckoutFormLabel=styled.label`
 justify-self: end;
+`
+const CheckoutFormInput=styled.input`
+border-color:${(props)=>(props.invalid ? "red" : "black" )};
+border-widht:${(props)=>(props.invalid ? "3px" : "1px" )};
+border-style: solid;
 `
 const CheckoutFormCheckbox=styled.input`
 grid-column: 2 / span 3;
